@@ -1,0 +1,16 @@
+# practice-s3-multiple-upload
+
+please rewrite `$bucket` on upload.pl
+
+## Usage
+
+```
+carton install
+make
+AWS_ACCESS_KEY_ID=....
+AWS_SECRET_ACCESS_KEY=....
+export AWS_ACCESS_KEY_ID
+export AWS_SECRET_ACCESS_KEY
+carton exec -- perl upload.pl
+```
+
