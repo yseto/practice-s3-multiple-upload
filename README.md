@@ -14,3 +14,11 @@ export AWS_SECRET_ACCESS_KEY
 carton exec -- perl upload.pl
 ```
 
+### streamed zip file archiver
+
+```
+make dummy12
+carton exec -- perl zip-upload.pl
+make diff
+```
+
