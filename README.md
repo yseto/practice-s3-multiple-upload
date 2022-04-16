@@ -22,3 +22,10 @@ carton exec -- perl zip-upload.pl
 make diff
 ```
 
+#### check diff zip file
+
+```
+carton exec -- perl zip.pl
+diff diff-dir/otameshi.dat dummy.zip
+```
+
