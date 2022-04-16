@@ -15,3 +15,7 @@ diff:
 	for number in 1 2 3 4 5 6 7 8 9 10 11 12; do \
 		diff dummy.$$number diff-dir/dummy.$$number ; \
 	done
+
+abort-multipart-upload:
+	aws s3api list-multipart-uploads --bucket __YOUR__S3__BUCKET__ | jq .Uploads[].UploadId | xargs -n1 aws s3api abort-multipart-upload --bucket __YOUR__S3__BUCKET__ --key otameshi.dat --upload-id
+
