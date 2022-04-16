@@ -109,7 +109,7 @@ my %total_digest = ();
 
 my @etag_check;
 my @sha256_check;
-foreach my $idx (sort keys %total_digest) {
+foreach my $idx (sort { $a <=> $b } keys %total_digest) {
     push @etag_check, $total_digest{$idx}{md5};
     push @sha256_check, $total_digest{$idx}{sha256};
 }
